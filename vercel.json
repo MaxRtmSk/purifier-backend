@@ -1,13 +1,13 @@
 {
     "version": 2,
     "env": {
-        "POSTGRES_HOST": "@VERCEL_POSTGRES_HOST",
-        "POSTGRES_PORT": "@VERCEL_POSTGRES_PORT",
-        "POSTGRES_DB": "@VERCEL_POSTGRES_DB",
-        "POSTGRES_USER": "@VERCEL_POSTGRES_USER",
-        "POSTGRES_PASSWORD": "@VERCEL_POSTGRES_PASSWORD",
-        "JWT_SECRET": "@VERCEL_JWT_SECRET",
-        "JWT_EXPIRATION_TIME": "1000000"
+        "VERCEL_POSTGRES_HOST": "@db_host",
+        "VERCEL_POSTGRES_PORT": "@db_port",
+        "VERCEL_POSTGRES_DB": "@db_database",
+        "VERCEL_POSTGRES_USER": "@db_user",
+        "VERCEL_POSTGRES_PASSWORD": "@db_password",
+        "VERCEL_JWT_SECRET": "@jwt_secret",
+        "VERCEL_JWT_EXPIRATION_TIME": "100000"
     },
     "builds": [
         {
