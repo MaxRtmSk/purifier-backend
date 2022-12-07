@@ -6,4 +6,6 @@ class BrandDto {
     title: string;
 }
 
+
+
 export default BrandDto;
