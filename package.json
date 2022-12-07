@@ -30,7 +30,7 @@
     "@nestjs/passport": "^9.0.0",
     "@nestjs/platform-express": "^9.1.5",
     "@nestjs/serve-static": "^3.0.0",
-    "@nestjs/swagger": "^6.1.2",
+    "@nestjs/swagger": "^6.1.4",
     "@types/passport-jwt": "^3.0.7",
     "@types/passport-local": "^1.0.34",
     "@types/pg": "^8.6.5",
