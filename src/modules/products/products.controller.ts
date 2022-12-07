@@ -1,8 +1,8 @@
 import { Body, ClassSerializerInterceptor, Controller, Delete, Get, Param, ParseArrayPipe, Post, Put, Query, UseGuards, UseInterceptors } from "@nestjs/common";
 import { ApiCookieAuth, ApiParam, ApiQuery, ApiTags } from "@nestjs/swagger";
-import { FindOneParams } from "src/utils/findOneParams";
 import { OrderParams } from "src/utils/orderParams";
 import JwtAuthenticationGuard from "../authentication/jwt-authentication.guard";
+import { FindOneParams } from "src/utils/findOneParams";
 import { GetProductsByCategoryQuery } from "./dto/getProductsByCategoryQuery";
 import { GetProductsByPriceQuery } from "./dto/getProductsByPriceQuery";
 import { ProductDto } from "./dto/product.dto";
