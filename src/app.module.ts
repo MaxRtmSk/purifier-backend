@@ -37,11 +37,11 @@ import { SubCategoriesModule } from './modules/subCategories/subCategories.modul
       imports: [ConfigModule],
       inject: [ConfigService],
       useFactory: (configService: ConfigService) => ({
-        host: configService.get('VERCEL_POSTGRES_HOST'),
-        port: configService.get('VERCEL_POSTGRES_PORT'),
-        user: configService.get('VERCEL_POSTGRES_USER'),
-        password: configService.get('VERCEL_POSTGRES_PASSWORD'),
-        database: configService.get('VERCEL_POSTGRES_DB'),
+        host: configService.get('POSTGRES_HOST'),
+        port: configService.get('POSTGRES_PORT'),
+        user: configService.get('POSTGRES_USER'),
+        password: configService.get('POSTGRES_PASSWORD'),
+        database: configService.get('POSTGRES_DB'),
       }),
     }),
     ConfigModule.forRoot({
