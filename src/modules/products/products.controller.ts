@@ -1,8 +1,6 @@
 import { Body, ClassSerializerInterceptor, Controller, Delete, Get, Param, ParseArrayPipe, Post, Put, Query, UseGuards, UseInterceptors } from "@nestjs/common";
 import { ApiCookieAuth, ApiQuery, ApiTags } from "@nestjs/swagger";
-import { OrderParams } from "src/utils/order-params";
 import JwtAuthenticationGuard from "../authentication/jwt-authentication.guard";
-import { FindOneParams } from "src/utils/findOneParams";
 import { GetProductsByCategoryQuery } from "./dto/getProductsByCategoryQuery";
 import { GetProductsByPriceQuery } from "./dto/getProductsByPriceQuery";
 import { ProductDto } from "./dto/product.dto";
@@ -24,7 +22,7 @@ export default class ProductsController {
         @Query() { priceMin, priceMax }: GetProductsByPriceQuery,
         @Query() { search }: SearchProductsQuery,
         @Query() { next }: LoadMorePagination,
-        @Query() { orderBy, sort }: OrderParams,
+        @Query() { orderBy, sort }: any,
     ) {
         return this.productsService.getProducts(
             categoryId,
@@ -39,14 +37,14 @@ export default class ProductsController {
     }
 
     @Get(':id')
-    getProductById(@Param() { id }: FindOneParams) {
+    getProductById(@Param() { id }: any) {
         return this.productsService.getProductById(id);
     }
 
     @Put(':id')
     @ApiCookieAuth()
     @UseGuards(JwtAuthenticationGuard)
-    updateProduct(@Param() { id }: FindOneParams, @Body() productData: ProductDto) {
+    updateProduct(@Param() { id }: any, @Body() productData: ProductDto) {
         return this.productsService.updateProduct(id, productData);
     }
 
@@ -60,7 +58,7 @@ export default class ProductsController {
     @Delete(':id')
     @ApiCookieAuth()
     @UseGuards(JwtAuthenticationGuard)
-    deleteProduct(@Param() { id }: FindOneParams) {
+    deleteProduct(@Param() { id }: any) {
         return this.productsService.deleteProduct(id);
     }
 }
