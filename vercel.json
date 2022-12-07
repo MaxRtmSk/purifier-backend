@@ -7,7 +7,7 @@
         "POSTGRES_USER": "@POSTGRES_USER",
         "POSTGRES_PASSWORD": "@POSTGRES_PASSWORD",
         "JWT_SECRET": "@JWT_SECRET",
-        "JWT_EXPIRATION_TIME": "100000"
+        "JWT_EXPIRATION_TIME": "1000000"
     },
     "builds": [
         {
