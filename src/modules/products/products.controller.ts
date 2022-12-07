@@ -1,6 +1,5 @@
 import { Body, ClassSerializerInterceptor, Controller, Delete, Get, Param, ParseArrayPipe, Post, Put, Query, UseGuards, UseInterceptors } from "@nestjs/common";
 import { ApiCookieAuth, ApiQuery, ApiTags } from "@nestjs/swagger";
-import { OrderParams } from "src/utils/order-params";
 import JwtAuthenticationGuard from "../authentication/jwt-authentication.guard";
 import { FindOneParams } from "src/utils/findOneParams";
 import { GetProductsByCategoryQuery } from "./dto/getProductsByCategoryQuery";
@@ -24,7 +23,7 @@ export default class ProductsController {
         @Query() { priceMin, priceMax }: GetProductsByPriceQuery,
         @Query() { search }: SearchProductsQuery,
         @Query() { next }: LoadMorePagination,
-        @Query() { orderBy, sort }: OrderParams,
+        @Query() { orderBy, sort }: any,
     ) {
         return this.productsService.getProducts(
             categoryId,
