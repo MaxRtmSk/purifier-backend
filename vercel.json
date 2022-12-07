@@ -1,14 +1,6 @@
 {
     "version": 2,
-    "env": {
-        "VERCEL_POSTGRES_HOST": "@db_host",
-        "VERCEL_POSTGRES_PORT": "@db_port",
-        "VERCEL_POSTGRES_DB": "@db_database",
-        "VERCEL_POSTGRES_USER": "@db_user",
-        "VERCEL_POSTGRES_PASSWORD": "@db_password",
-        "VERCEL_JWT_SECRET": "@jwt_secret",
-        "VERCEL_JWT_EXPIRATION_TIME": "1000000"
-    },
+    "env": {},
     "builds": [
         {
             "src": "src/main.ts",
