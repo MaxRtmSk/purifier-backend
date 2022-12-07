@@ -7,7 +7,7 @@
         "VERCEL_POSTGRES_USER": "@db_user",
         "VERCEL_POSTGRES_PASSWORD": "@db_password",
         "VERCEL_JWT_SECRET": "@jwt_secret",
-        "VERCEL_JWT_EXPIRATION_TIME": "100000"
+        "VERCEL_JWT_EXPIRATION_TIME": "1000000"
     },
     "builds": [
         {
