@@ -1,3 +1,5 @@
+// import fs from 'fs';
+
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
@@ -24,6 +26,9 @@ async function bootstrap() {
   };
 
   const document = SwaggerModule.createDocument(app, config);
+
+  // fs.writeFileSync("./swagger-spec.json", JSON.stringify(document));
+
   SwaggerModule.setup('docs', app, document, options);
 
   await app.listen(process.env.PORT || 3000);

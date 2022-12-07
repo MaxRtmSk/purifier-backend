@@ -4,7 +4,7 @@ import {
     CONNECTION_POOL,
     DATABASE_OPTIONS,
 } from './database.module-definition';
-import DatabaseOptions from './databaseOptions';
+import { DatabaseOptions } from './databaseOptions';
 import { Pool } from 'pg';
 import DatabaseService from './database.service';
 
@@ -28,4 +28,4 @@ import DatabaseService from './database.service';
         },
     ],
 })
-export default class DatabaseModule extends ConfigurableDatabaseModule { }
+export class DatabaseModule extends ConfigurableDatabaseModule { }

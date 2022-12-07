@@ -5,7 +5,7 @@ import { ServeStaticModule } from '@nestjs/serve-static';
 import * as Joi from 'joi';
 
 import { MulterModule } from '@nestjs/platform-express';
-import DatabaseModule from './database/database.module';
+import { DatabaseModule } from './database/database.module';
 import { ProductsModule } from './modules/products/products.module';
 import { UsersModule } from './modules/users/users.module';
 import { AuthenticationModule } from './modules/authentication/authentication.module';
@@ -47,6 +47,7 @@ import { SubCategoriesModule } from './modules/subCategories/subCategories.modul
     ConfigModule.forRoot({
       envFilePath: '.env',
       validationSchema: Joi.object({
+        // DATABASE_URL: Joi.string().required(),
         POSTGRES_HOST: Joi.string().required(),
         POSTGRES_PORT: Joi.number().required(),
         POSTGRES_USER: Joi.string().required(),
