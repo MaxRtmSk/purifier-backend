@@ -1,11 +1,11 @@
 {
     "version": 2,
     "env": {
-        "POSTGRES_HOST": "@db_host",
-        "POSTGRES_PORT": "@db_port",
-        "POSTGRES_DB": "@db_database",
-        "POSTGRES_USER": "@db_user",
-        "POSTGRES_PASSWORD": "@db_password",
+        "POSTGRES_HOST": "@POSTGRES_HOST",
+        "POSTGRES_PORT": "@POSTGRES_PORT",
+        "POSTGRES_DB": "@POSTGRES_DB",
+        "POSTGRES_USER": "@POSTGRES_USER",
+        "POSTGRES_PASSWORD": "@POSTGRES_PASSWORD",
         "JWT_SECRET": "secretkey",
         "JWT_EXPIRATION_TIME": "100000"
     },
